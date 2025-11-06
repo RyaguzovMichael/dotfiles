@@ -7,8 +7,6 @@ return {
             "javascript",
             "json",
             "lua",
-            "markdown",
-            "markdown_inline",
             "query",
             "regex",
             "tsx",
@@ -16,15 +14,6 @@ return {
             "vim",
             "yaml",
             "c_sharp",
-        },
-    },
-    incremental_selection = {
-        enable = true,
-        keymaps = {
-            init_selection = "<C-space>",
-            node_incremental = "<C-space>",
-            scope_incremental = false,
-            node_decremental = "<bs>",
         },
     },
     textobjects = {
