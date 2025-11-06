@@ -52,4 +52,7 @@ return {
             })
         end,
     },
+    {
+        "Issafalcon/neotest-dotnet",
+    },
 }
