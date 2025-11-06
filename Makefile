@@ -5,7 +5,7 @@ NVIM_CONFIG_DIR = $(CONFIG_DIR)/nvim
 
 FORCE :=
 
-.PHONY: default all terminal nvim nvim-restore .nvim-clear .nvim-backup .nvim-backup-not-exist
+.PHONY: default all terminal nvim nvim-restore .nvim-backup
 
 default: all
 
@@ -29,24 +29,8 @@ nvim-restore:
 $(BACKUP_DIR):
 	@mkdir -p $@
 
-.nvim-backup: $(BACKUP_DIR) .nvim-backup-not-exist
+.nvim-backup: $(BACKUP_DIR)
 	@if [ -d $(NVIM_CONFIG_DIR) ]; then \
 		echo "Found existing Neovim config. Creating backup..."; \
 		mv $(NVIM_CONFIG_DIR) "$(BACKUP_DIR)/nvim.bak"; \
 	fi
-
-.nvim-backup-not-exist:
-	@if [ -d $(BACKUP_DIR)/nvim.bak ]; then \
-		if [ -z "$(FORCE)" ]; then \
-			echo "Found existing backup. If you want to rewrite it, run 'make nvim FORCE=true'"; \
-			exit 1; \
-		else \
-			echo "FORCE flag detected. Overwriting existing backup..."; \
-		fi; \
-	fi
-
-.nvim-clear:
-	@if [ -d $(NVIM_CONFIG_DIR) ]; then \
-		rm -rf $(NVIM_CONFIG_DIR); \
-	fi
-
