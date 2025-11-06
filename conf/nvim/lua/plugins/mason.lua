@@ -53,6 +53,14 @@ return {
         end,
     },
     {
-        "Issafalcon/neotest-dotnet",
+        "nvim-neotest/neotest",
+        dependencies = {
+            "Issafalcon/neotest-dotnet",
+        },
+        opts = function(_, opts)
+            opts.adapters = opts.adapters or {}
+            opts.adapters["neotest-dotnet"] = require("neotest-dotnet")
+            return opts
+        end,
     },
 }

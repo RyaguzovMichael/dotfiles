@@ -12,8 +12,3 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     command = "setlocal nospell",
 })
 
-require("neotest").setup({
-    adapters = {
-        require("neotest-dotnet"),
-    },
-})
