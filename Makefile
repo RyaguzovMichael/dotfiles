@@ -32,5 +32,6 @@ $(BACKUP_DIR):
 .nvim-backup: $(BACKUP_DIR)
 	@if [ -d $(NVIM_CONFIG_DIR) ]; then \
 		echo "Found existing Neovim config. Creating backup..."; \
+		rm -rf "$(BACKUP_DIR)/nvim.bak"; \
 		mv $(NVIM_CONFIG_DIR) "$(BACKUP_DIR)/nvim.bak"; \
 	fi
