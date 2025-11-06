@@ -3,7 +3,9 @@
         "lazyvim.plugins.extras.editor.neo-tree",
         "lazyvim.plugins.extras.lang.vue",
         "lazyvim.plugins.extras.formatting.prettier",
-        "lazyvim.plugins.extras.lang.markdown"
+        "lazyvim.plugins.extras.lang.markdown",
+        "lazyvim.plugins.extras.lang.json",
+        "lazyvim.plugins.extras.test.core"
     ],
     "install_version": 8,
     "news": {
