@@ -1,12 +1,12 @@
 return {
-  {
-    "snacks.nvim",
-    opts = {
-      dashboard = {
-        preset = {
-          header = [[Famine]],
+    {
+        "snacks.nvim",
+        opts = {
+            dashboard = {
+                preset = {
+                    header = [[Famine]],
+                },
+            },
         },
-      },
     },
-  },
 }

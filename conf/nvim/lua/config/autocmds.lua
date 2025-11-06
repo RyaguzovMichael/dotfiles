@@ -11,3 +11,11 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     pattern = { "markdown" },
     command = "setlocal nospell",
 })
+
+vim.api.nvim_create_autocmd({ "FileType" }, {
+    pattern = { "json", "jsonc" },
+    callback = function()
+        vim.b.autoformat = false
+        vim.notify("Auto formatting disabled for this JSON file.", vim.log.levels.INFO)
+    end,
+})
