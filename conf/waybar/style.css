@@ -1,0 +1,97 @@
+* {
+  font-family:
+    "Agave Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  transition: background-color 0.3s ease-out;
+}
+
+/* COLORS */
+@define-color nrd_bck            #2E3440;
+@define-color nrd_bck_element    #3B4251;
+@define-color nrd_bck_active     #434C5E;
+@define-color nrd_bck_accent     #4C566A;
+@define-color nrd_txt_active     #D8DEE9;
+@define-color nrd_txt            #E5E9F0;
+@define-color nrd_txt_accent     #ECEFF4;
+@define-color nrd_ui_accent      #8FBCBB;
+@define-color nrd_ui_main        #88C0D0;
+@define-color nrd_ui_secondary   #81A1C1;
+@define-color nrd_ui_tertiary    #5E81AC;
+@define-color nrd_error          #BF616A;
+@define-color nrd_danger         #D08770;
+@define-color nrd_warning        #EBCB8B;
+@define-color nrd_success        #A3BE8C;
+@define-color nrd_uncommon       #B48EAD;
+
+window#waybar {
+  background: @nrd_bck;
+  color: @nrd_txt;
+  font-family:
+    Agave Nerd Font,
+    feather;
+  transition: background-color 0.5s;
+  border-bottom: 5px solid @nrd_ui_main;
+}
+
+.modules-center {
+  background: transparent;
+}
+
+.modules-right {
+  background: transparent;
+}
+
+.modules-left {
+  background: transparent;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#language,
+#mpd {
+  background: transparent;
+  padding: 0 10px;
+}
+
+#workspaces button {
+  background: @nrd_bck_element;
+  color: @nrd_txt;
+  border-width: 0 0 5px 0;
+  border-radius: 10px 10px 0 0;
+  border-style: solid;
+  border-color: @nrd_ui_main;
+  padding: 0 25px;
+}
+
+#workspaces button.active {
+  background: @nrd_ui_main;
+  color: @nrd_bck_active;
+}
+
+#workspaces button:hover {
+  box-shadow: none;
+  text-shadow: none;
+}
+
+#custom-arch {
+  margin-left: 5px;
+  padding: 0 10px;
+}
+
+#window {
+  background: rgba(1, 1, 1, 0);
+}

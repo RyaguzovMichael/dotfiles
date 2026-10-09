@@ -1,0 +1,51 @@
+{
+  "custom/arch": {
+    "format": "󰣇 ",
+    "tooltip": false
+  },
+  "hyprland/window": {
+    "format": "{class}",
+    "tooltip": false
+  },
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "disable-scroll": true,
+    "all-outputs": true,
+    "tooltip": false,
+    "on-click": "none",
+    "ignore-workspaces": ["^9$"]
+  },
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-muted": "x{icon}",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-bluetooth-muted": "x{icon}",
+    "format-icons": {
+      "headset": " ",
+      "default": [" ", " ", " "]
+    },
+    "tooltip": false
+  },
+  "network": {
+    "format-ethernet": "󰱓 ",
+    "format-linked": "󰛳 ",
+    "format-disconnected": "󰅛 ",
+    "tooltip": false
+  },
+  "cpu": {
+    "format": "  {usage}%",
+    "tooltip": false
+  },
+  "memory": {
+    "format": "  {}%",
+    "tooltip": false
+  },
+  "hyprland/language": {
+    "format": "  {}",
+    "format-en": "EN",
+    "format-ru": "RU"
+  },
+  "clock": {
+    "format": "{:%e %B | %H:%M} "
+  }
+}
